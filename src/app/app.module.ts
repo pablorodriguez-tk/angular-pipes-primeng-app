@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 
 import { SharedModule } from './shared/shared.module';
 import { VentasModule } from './ventas/ventas.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //Cambiar el locale de la app
 import localeEs from '@angular/common/locales/es-AR';
@@ -13,7 +14,13 @@ import { registerLocaleData } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, SharedModule, AppRouterModule, VentasModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    SharedModule,
+    AppRouterModule,
+    VentasModule,
+  ],
   providers: [
     {
       provide: LOCALE_ID,
