@@ -34,4 +34,12 @@ export class NoComunesComponent {
 
   //keyValue Pipe
   persona = { nombre: 'Pablo', edad: 33, direccion: 'Buenos Aires' };
+
+  //Json Pipe
+  heroes = [
+    { nombre: 'Batman', poder: 'Dinero' },
+    { nombre: 'Superman', poder: 'Superpoderes' },
+    { nombre: 'Flash', poder: 'Velocidad' },
+    { nombre: 'Aquaman', poder: 'Volar', ojos: true },
+  ];
 }
