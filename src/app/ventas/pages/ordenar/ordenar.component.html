@@ -13,25 +13,33 @@
       (click)="cambiar()"
       label="Toggle mayusculas"
     ></button>
-    <button pButton icon="pi pi-sort" label="Por nombre" class="mr-1"></button>
+    <button
+      pButton
+      icon="pi pi-sort"
+      label="Por nombre"
+      class="mr-1"
+      (click)="cambiarOrden('nombre')"
+    ></button>
     <button
       pButton
       icon="pi pi-sort"
       label="Vuela"
       class="mr-1 p-button-success"
+      (click)="cambiarOrden('vuela')"
     ></button>
     <button
       pButton
       icon="pi pi-sort"
       label="Por color"
       class="mr-1 p-button-help"
+      (click)="cambiarOrden('color')"
     ></button>
   </div>
 </p-toolbar>
 
 <div class="grid">
   <div class="col mt-3">
-    <p-table [value]="heroes | ordenar" responsiveLayout="scroll">
+    <p-table [value]="heroes | ordenar: ordernarPor" responsiveLayout="scroll">
       <ng-template pTemplate="header">
         <tr>
           <th>Nombre</th>
